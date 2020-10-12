@@ -63,3 +63,8 @@ First invoke the script using `alt + u`, input a movie name, or use the one prov
 As the name suggests this is a small script for deleting files played through mpv. You can mark a file to be deleted and can unmark it if desired. Once quitting mpv, the script starts the deletion process. This is platform-agnostic so should work everywhere.
 
 `ctrl + DEL`: mark/unmark file to be deleted
+
+## trash-file-skip
+Instead of deleting the marked files are moved to trash after mpv exits. Additionally, the marked file is skipped and the next playlist item is selected if there is any. `gio trash <file>` is used to move files to trash. Therefore, this scripts works on Linux only.
+
+`alt + DEL`: mark/unmark a file to be moved to trash
