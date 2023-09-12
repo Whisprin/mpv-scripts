@@ -14,7 +14,7 @@ function contains_item(l, i)
    return false
 end
 
-function mark_trash()
+function mark_trash_skip()
    local work_dir = mp.get_property_native("working-directory")
    local file_path = mp.get_property_native("path")
    local s = file_path:find(work_dir, 0, true)
@@ -39,5 +39,5 @@ function trash(e)
    end
 end
 
-mp.add_key_binding("alt+DEL", "trash_file", mark_trash)
+mp.add_key_binding("alt+DEL", "trash_file_skip", mark_trash_skip)
 mp.register_event("end-file", trash)
